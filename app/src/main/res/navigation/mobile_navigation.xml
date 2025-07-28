@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_monitor"
+        android:name="com.example.driverdrowsinessdetectionsystem.MonitorMenu"
+        android:label="monitor_menu"
+        tools:layout="@layout/activity_monitor_menu" />
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.example.driverdrowsinessdetectionsystem.HelpActivity$PlaceholderFragment"
+        android:label="help_menu"
+        tools:layout="@layout/activity_helpview" />
+
+
+</navigation>

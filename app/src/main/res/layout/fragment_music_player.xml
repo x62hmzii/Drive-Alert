@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MusicPlayerFragment">
+
+    <!-- AI Assistant Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/ai_assistant_bg"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp"
+        android:outlineProvider="bounds">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_music_assistant"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvAssistantStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_mic_prompt"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/assistantAnimation"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ai_assistant_wave"/>
+
+        <!-- Changed to ImageButton with contentDescription -->
+        <ImageButton
+            android:id="@+id/btnAssistant"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/ic_mic"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/mic_button_desc"
+            android:elevation="8dp"
+            android:importantForAccessibility="yes"/>
+    </LinearLayout>
+
+    <!-- Playback Controls Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnPlayPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play_icon"
+            android:visibility="gone"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- Current Song Info -->
+    <TextView
+        android:id="@+id/tvNowPlaying"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/not_playing"
+        android:textSize="14sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <!-- Mood Selection Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/available_moods"
+        android:textSize="14sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="4dp"/>
+
+    <!-- Moods ListView -->
+    <ListView
+        android:id="@+id/lvPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:scrollbars="vertical"
+        android:choiceMode="singleChoice"
+        android:fastScrollEnabled="true"/>
+
+    <!-- Action Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnAddSong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_song"
+            android:textAllCaps="false"
+            android:drawableStart="@android:drawable/ic_menu_add"
+            android:drawablePadding="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_shape"/>
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stop"
+            android:visibility="gone"
+            android:backgroundTint="@color/red"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:progressTint="@color/teal_700"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpActivity">
+
+    <TextView
+        android:id="@+id/helpText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:textSize="26sp"
+        android:lineSpacingExtra="18dp"
+        android:textColor="@color/black"
+        android:text="Drowsiness detection is a safety technology that can prevent accidents caused by drivers who fall asleep while driving. The objective of this project is to build a drowsiness detection system that detects drowsiness in real-time from a live video stream and alerts the user with an alarm notification."
+        android:textAlignment="center" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

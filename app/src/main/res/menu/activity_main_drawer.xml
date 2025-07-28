@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Monitor" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/locate"
+        android:title="Live Location" />
+        <item
+            android:id="@+id/nav_music_player"
+            android:icon="@drawable/listen"
+            android:title="Music Player" />
+        <item
+            android:id="@+id/nav_emergency"
+            android:icon="@drawable/seos"
+            android:title="Emergency SOS" />
+        <item
+            android:id="@+id/help_page"
+            android:title="Help"
+            android:icon="@drawable/helpy" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/stng"
+            android:title="Settings" />
+    </group>
+</menu>

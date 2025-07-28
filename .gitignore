@@ -1,0 +1,65 @@
+# === Android Studio / IntelliJ ===
+*.iml
+.idea/
+.gradle/
+*.log
+local.properties
+/local.properties
+
+# === Gradle ===
+/build
+*/build/
+.externalNativeBuild/
+.cxx/
+
+# === Firebase & API Keys (very important) ===
+google-services.json
+*.jks
+*.keystore
+*.p12
+*.pem
+*.crt
+*.key
+
+# === APK, DB, and Sensitive Artifacts ===
+*.apk
+*.db
+*.bak
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+
+# === Editor / Temp Files ===
+*.swp
+*~
+*.tmp
+
+# === Capture folders ===
+/captures
+
+# === Optional: Ignore backup files ===
+*.old
+*.orig
+*.rej
+
+# === Optional: Env files ===
+.env
+.env.*
+
+# === Exclude metadata or crash files ===
+*.crash
+*.stacktrace
+
+# === NEW: TensorFlow / ML Model Files (just in case) ===
+*.tflite
+*.pb
+*.pt
+*.h5
+
+# === NEW: Android generated nav safe args (optional) ===
+.navigation/
+
+# === NEW: Mac/Windows Thumbnails/metadata ===
+ehthumbs.db
+Desktop.ini

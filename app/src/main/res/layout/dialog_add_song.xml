@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Song Name Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Song Name:"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/etSongName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter song name"
+        android:inputType="textCapWords"
+        android:maxLines="1"
+        android:importantForAutofill="no"/>
+
+    <!-- Song Type Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Song Type:"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgSongType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@+id/rbLocal">
+
+        <RadioButton
+            android:id="@+id/rbLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Local File"
+            android:layout_marginEnd="16dp"/>
+    </RadioGroup>
+
+    <!-- File Path Input (for local files) -->
+    <TextView
+        android:id="@+id/tvFilePathLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="File Path:"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/etSongPath"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="No file selected"
+            android:inputType="none"
+            android:focusable="false"
+            android:clickable="true"
+            android:importantForAutofill="no"
+            android:onClick="onPathClick"/>
+
+        <Button
+            android:id="@+id/btnBrowse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse"
+            android:layout_marginStart="8dp"
+            android:minWidth="96dp"/>
+    </LinearLayout>
+
+    <!-- YouTube Query Input (for online songs) -->
+    <TextView
+        android:id="@+id/tvYoutubeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="YouTube Search Query:"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/etYoutubeQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter song name or artist"
+        android:inputType="textCapWords"
+        android:visibility="gone"
+        android:importantForAutofill="no"/>
+
+</LinearLayout>

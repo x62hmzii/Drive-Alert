@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emergency Number:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/et_emergency_number"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="phone"
+        android:hint="e.g. 112 or 911"
+        android:maxLines="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emergency Message:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/et_emergency_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:maxLines="5"
+        android:hint="Message to send during emergency"/>
+</LinearLayout>
